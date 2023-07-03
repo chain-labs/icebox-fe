@@ -4,6 +4,15 @@ const nextConfig = {
         config?.resolve?.extenstions?.push('.ts', '.tsx')
         return config
     },
+    images: {
+        dangerouslyAllowSVG: true,
+        remotePatterns: [{
+            protocol: 'https',
+            hostname: 'ik.imagekit.io',
+            port: '',
+            pathname: '/chainlabs/**',
+        },],
+    },
     reactStrictMode: true,
 }
 
