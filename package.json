@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_33033910c5f8717"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.12.1",
+    "akar-icons": "^1.9.28",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.1",
     "ethers": "5.7.2",
@@ -33,6 +35,7 @@
     "@types/react": "^18.2.12",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "autoprefixer": "^10.4.14",
+    "chromatic": "^6.19.9",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
@@ -42,5 +45,7 @@
     "storybook": "^7.0.22",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "owlearn@0.1.0"
 }
