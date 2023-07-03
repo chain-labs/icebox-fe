@@ -1,7 +1,7 @@
-import SearchBar from ".";
+import SearchBar from "./index";
 
 const meta = {
-    title: 'Example/Searchbar',
+    title: 'Navigation/Searchbar',
     component: SearchBar,
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
     tags: ['autodocs'],
@@ -12,3 +12,7 @@ const meta = {
 }
 
 export default meta;
+
+export const Default = {
+    args: {}
+}

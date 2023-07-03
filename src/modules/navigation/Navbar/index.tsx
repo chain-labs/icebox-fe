@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import SearchBar from '../Searchbar'
+import NavLink from './components/NavLink'
 
-const BRANDING =
+export const BRANDING =
     'https://ik.imagekit.io/chainlabs/Icebox/brand_ksZtKrQWs.svg?updatedAt=1688371940655'
 
 const Navbar = ({ page }) => {
@@ -32,15 +33,3 @@ const Navbar = ({ page }) => {
 }
 
 export default Navbar
-
-const NavLink = ({ text, page }) => {
-    return (
-        <div
-            className={`ml-6 px-4 py-2 cursor-pointer font-medium text-lg text-${
-                page === text ? 'black' : 'neutral-400'
-            }`}
-        >
-            {text}
-        </div>
-    )
-}
