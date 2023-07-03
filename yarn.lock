@@ -2741,10 +2741,10 @@
     "@storybook/types" "7.0.22"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-styling@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-styling/-/addon-styling-1.3.0.tgz#59493557daaf232c285252e752ae2b3f105b2c81"
-  integrity sha512-+Ak9+SysMepRdXGlqDBlhR4cOSDCFEIfGuOW7nyA5eOgHi0IyTg9M+yfBgHVru7dEh+rq47XTVr44UhsWd4xgA==
+"@storybook/addon-styling@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-styling/-/addon-styling-1.3.2.tgz#b8a689bcfa5e2e46a9c42d616fe587243ae7be09"
+  integrity sha512-pxc2ncCH3jlOjsJFOmUECxIFvC4jmUxd0noeEC4shGfKvGhsssHpxcVtA36+s3JhDdx+Yhrk/0KeYoMe+35/qg==
   dependencies:
     "@babel/template" "^7.20.7"
     "@babel/types" "^7.21.5"
@@ -2752,7 +2752,6 @@
     "@storybook/components" "^7.0.12"
     "@storybook/core-common" "^7.0.12"
     "@storybook/core-events" "^7.0.12"
-    "@storybook/csf-tools" "^7.0.12"
     "@storybook/manager-api" "^7.0.12"
     "@storybook/node-logger" "^7.0.12"
     "@storybook/preview-api" "^7.0.12"
@@ -2761,7 +2760,6 @@
     css-loader "^6.7.3"
     less-loader "^11.1.0"
     postcss-loader "^7.2.4"
-    recast "^0.23.2"
     resolve-url-loader "^5.0.0"
     sass-loader "^13.2.2"
     style-loader "^3.3.2"
@@ -3219,7 +3217,7 @@
     "@storybook/csf-tools" "7.0.22"
     unplugin "^0.10.2"
 
-"@storybook/csf-tools@7.0.22", "@storybook/csf-tools@^7.0.12":
+"@storybook/csf-tools@7.0.22":
   version "7.0.22"
   resolved "https://registry.yarnpkg.com/@storybook/csf-tools/-/csf-tools-7.0.22.tgz#58790eca45d29da68e98f530e88861a8c5ec97bd"
   integrity sha512-rRlacX+h5HMXhizlDJy6+ILDZblxLo9uZR1CktlC+FOmbEWlB8WIK036I/t6H64AO0doahqaVwwVExULuHf0SA==
@@ -10544,7 +10542,7 @@ recast@^0.21.0:
     source-map "~0.6.1"
     tslib "^2.0.1"
 
-recast@^0.23.1, recast@^0.23.2:
+recast@^0.23.1:
   version "0.23.2"
   resolved "https://registry.yarnpkg.com/recast/-/recast-0.23.2.tgz#d3dda3e8f0a3366860d7508c00e34a338ac52b41"
   integrity sha512-Qv6cPfVZyMOtPszK6PgW70pUgm7gPlFitAPf0Q69rlOA0zLw2XdDcNmPbVGYicFGT9O8I7TZ/0ryJD+6COvIPw==
