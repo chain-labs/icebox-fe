@@ -2,9 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import SearchBar from '../Searchbar'
 import NavLink from './components/NavLink'
-
-export const BRANDING =
-    'https://ik.imagekit.io/chainlabs/Icebox/brand_ksZtKrQWs.svg?updatedAt=1688371940655'
+import { BRANDING } from '@/common/constants'
 
 const Navbar = ({ page }) => {
     return (

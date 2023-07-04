@@ -1,11 +1,6 @@
+import { INFO_SVG, SORTING_SVG } from '@/common/constants'
 import If from '@/src/common/components/If'
 import Image from 'next/image'
-
-const SORTING_SVG =
-    'https://ik.imagekit.io/chainlabs/Icebox/column-sorting_CG5oqH1Em.svg?updatedAt=1688419803019'
-
-const INFO_SVG =
-    'https://ik.imagekit.io/chainlabs/Icebox/info_BOVGJLuwh.svg?updatedAt=1688420406076'
 
 interface HeaderItemProps {
     title: string
