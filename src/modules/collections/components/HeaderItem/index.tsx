@@ -17,7 +17,7 @@ interface HeaderItemProps {
 const HeaderItem = ({ title, sort, info, width }: HeaderItemProps) => {
     return (
         <div
-            className={`px-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center`}
+            className={`pl-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center cursor-pointer`}
             style={{ width: width }}
         >
             <div className="mr-1.5">{title}</div>

@@ -3,7 +3,7 @@ import TableHeader from '../components/TableHeader'
 
 const Table = () => {
     return (
-        <div>
+        <div className="w-max-[1320px]">
             <TableHeader />
         </div>
     )
