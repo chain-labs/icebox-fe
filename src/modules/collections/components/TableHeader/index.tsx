@@ -8,8 +8,8 @@ const TableHeader = () => {
             <HeaderItem title="INSCRIPTION #" sort width="12%" />
             <HeaderItem title="TOP LOAN OFFER" sort width="10%" />
             <HeaderItem title="FLOOR PRICE" sort width="10%" />
-            <HeaderItem title="7D LOAN VOLUME" sort width="10%" />
-            <HeaderItem title="7D SALES VOLUME" sort width="10%" />
+            <HeaderItem title="7D LOAN VOLUME" sort width="12%" />
+            <HeaderItem title="7D SALES VOLUME" sort width="12%" />
             <HeaderItem title="BUY ON" info width="6%" />
         </div>
     )

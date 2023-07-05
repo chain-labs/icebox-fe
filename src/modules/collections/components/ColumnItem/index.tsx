@@ -2,26 +2,24 @@ import { INFO_SVG, SORTING_SVG } from '@/common/constants'
 import If from '@/src/common/components/If'
 import Image from 'next/image'
 
-interface HeaderItemProps {
+interface ColumnItemProps {
     title: string
-    sort?: boolean
-    info?: boolean
     width?: string
 }
 
-const HeaderItem = ({ title, sort, info, width }: HeaderItemProps) => {
+const ColumnItem = ({ title, sort, info, width }: ColumnItemProps) => {
     return (
         <div
-            className={`pl-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center cursor-pointer border-b border-b-slate-200`}
+            className={`pl-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center cursor-pointer`}
             style={{ width: width }}
         >
-            <div className="mr-1.5 flex items-center">{title}</div>
+            <div className="mr-1.5">{title}</div>
             <If
                 condition={sort}
                 then={
                     <Image
                         src={SORTING_SVG}
-                        alt="sort_svg"
+                        alt="bitcoin"
                         width={16}
                         height={16}
                     />
