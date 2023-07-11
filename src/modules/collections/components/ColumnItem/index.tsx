@@ -5,6 +5,8 @@ import Image from 'next/image'
 interface ColumnItemProps {
     title: string
     width?: string
+    sort?: boolean
+    info?: boolean
 }
 
 const ColumnItem = ({ title, sort, info, width }: ColumnItemProps) => {
@@ -40,4 +42,4 @@ const ColumnItem = ({ title, sort, info, width }: ColumnItemProps) => {
     )
 }
 
-export default HeaderItem
+export default ColumnItem
