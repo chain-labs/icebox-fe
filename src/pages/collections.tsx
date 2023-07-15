@@ -3,6 +3,7 @@ import Pagination from '@/common/components/Pagination'
 import usePaginate from '@/common/hooks/usePaginate'
 import Table from '@/modules/collections/Table'
 import { TableItemProps } from '@/modules/collections/components/TableItem'
+import { ArrowCycle } from 'akar-icons'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
@@ -32,6 +33,17 @@ const CollectionsPage = () => {
             setCurrentItems(currentData())
         }
     }, [currentPage, items, itemsPerPage])
+
+    if (items.length === 0) {
+        return (
+            <div className="h-screen w-full flex items-center justify-center">
+                <div className="animate-spin">
+                    <ArrowCycle strokeWidth={2} size={36} color="black" />
+                </div>
+                <div className="text-xl font-semibold ml-4">Fetching...</div>
+            </div>
+        )
+    }
 
     return (
         <div className="pt-[42px] px-[60px] h-screen">

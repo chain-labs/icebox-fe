@@ -20,3 +20,6 @@ export const SHIP_MARKETPLACE_SVG =
 
 export const GEM_MARKETPLACE_SVG =
     'https://ik.imagekit.io/chainlabs/Icebox/group-3577_O71pVIrWd.svg?updatedAt=1688463932721'
+
+export const LANDING_IMAGE =
+    'https://ik.imagekit.io/chainlabs/Icebox/fotor-ai-2023071517236_3_WIAVy6-_LR.jpg?updatedAt=1689420796458'
