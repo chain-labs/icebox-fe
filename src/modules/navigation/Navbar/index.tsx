@@ -12,7 +12,7 @@ const Navbar = ({ page }) => {
                     <div className="h-10 w-[108px] relative cursor-pointer">
                         <Image fill src={BRANDING} alt="logo-branding" />
                     </div>
-                    <NavLink text="Collection" page={page} url="/collections" />
+                    <NavLink text="Collections" page={page} url="/collections" />
                     <NavLink text="Portfolio" page={page} url="/portfolio" />
                 </div>
             </div>
