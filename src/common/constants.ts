@@ -6,11 +6,11 @@ export const SORTING_SVG =
 export const INFO_SVG =
     'https://ik.imagekit.io/chainlabs/Icebox/info_BOVGJLuwh.svg?updatedAt=1688420406076'
 
-export const BRANDING =
-    'https://ik.imagekit.io/chainlabs/Icebox/brand_ksZtKrQWs.svg?updatedAt=1688371940655'
-
 export const LOGO_URL =
-    'https://ik.imagekit.io/chainlabs/Icebox/logo_NfwqdttFw.svg?updatedAt=1688371769348'
+    'https://ik.imagekit.io/chainlabs/Icebox/logo_5ExNWWzkk.svg?updatedAt=1689418337079'
+
+export const BRANDING =
+    'https://ik.imagekit.io/chainlabs/Icebox/Frame_10branding_PBi6BshSk.svg?updatedAt=1689418337191'
 
 export const BITCOIN_SVG =
     'https://ik.imagekit.io/chainlabs/Icebox/bitcoin-svg_1NJktT6hi.svg?updatedAt=1688413962017'

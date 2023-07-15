@@ -29,8 +29,6 @@ export default async function handler(req, res) {
             return o.slug === collection.slug
         })
 
-        console.log({ volume })
-
         const supply = _.find(COLLECTION_SUPPLY, function (o) {
             return o.slug === collection.slug
         })
@@ -69,7 +67,6 @@ export default async function handler(req, res) {
                 gem: true,
             },
         }
-        console.log({ tableItem })
 
         response.push(tableItem)
     })

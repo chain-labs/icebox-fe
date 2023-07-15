@@ -36,8 +36,6 @@ export type TableItemProps = {
 }
 
 const TableItem = (props: TableItemProps) => {
-    console.log({ props })
-
     return (
         <Link href={`/collection/${props?.slug}`}>
             <div className="text-black text-sm w-full h-12 bg-white border-b border-b-slate-200 flex justify-between items-center cursor-pointer hover:bg-[#f8f9fc] hover:bg-opacity-80 hover:backdrop-blur-[8px]">
