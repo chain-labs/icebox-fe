@@ -13,7 +13,7 @@ const CollectionsPage = () => {
     const [itemsPerPage, setItemsPerPage] = useState<number>(10)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/collections').then((res) => {
+        axios.get(`${window.location.origin}/api/collections`).then((res) => {
             setItems(res.data)
         })
     }, [])
