@@ -4,6 +4,13 @@ import _ from 'lodash'
 const MAX_BEFORE_KINK = 10
 const MAX_BUNCH = 7
 
+export type IPaginationInfo = {
+    range: { max: number; min: number }
+    total: number
+    currentPage: number
+    totalPages: number
+}
+
 const usePaginate = (
     data: any[],
     itemsPerPage: number,
@@ -16,9 +23,8 @@ const usePaginate = (
 
     useEffect(() => {
         if (itemsPerPage) {
-            console.log({ itemsPerPage })
-            const maxPgs = Math.floor(data.length / itemsPerPage)
-            console.log({ maxPgs })
+            setCurrentPage(1)
+            const maxPgs = Math.ceil(data.length / itemsPerPage)
             setMaxPages(maxPgs)
         }
     }, [itemsPerPage, data.length])
@@ -33,13 +39,33 @@ const usePaginate = (
 
     const jump = (page: number) => {
         const pageNumber = Math.max(1, page)
+        console.log('jump')
+
         setCurrentPage(Math.min(pageNumber, maxPages))
     }
 
     const currentData = () => {
         const begin = (currentPage - 1) * itemsPerPage
         const end = begin + itemsPerPage
+        console.log({ currentPage, itemsPerPage, data: data.slice(begin, end) })
+
         return data.slice(begin, end)
+    }
+
+    const getPaginationInfo = (): IPaginationInfo => {
+        const begin = (currentPage - 1) * itemsPerPage + 1
+        const end = begin + itemsPerPage - 1
+        console.log({ info: currentPage })
+
+        return {
+            range: {
+                min: begin,
+                max: end,
+            },
+            total: data.length,
+            currentPage: currentPage,
+            totalPages: maxPages,
+        }
     }
 
     const getPaginationTiles = () => {
@@ -79,6 +105,7 @@ const usePaginate = (
         jump,
         currentData,
         getPaginationTiles,
+        getPaginationInfo,
     }
 }
 

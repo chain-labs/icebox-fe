@@ -25,14 +25,16 @@ const CollectionsPage = () => {
         prev,
         next,
         jump,
-        getPaginationTiles,
+        getPaginationInfo,
     } = usePaginate(items, itemsPerPage)
 
-    useEffect(() => {
-        if (currentPage && items.length) {
-            setCurrentItems(currentData())
-        }
-    }, [currentPage, items, itemsPerPage])
+    useEffect
+
+    // useEffect(() => {
+    //     if (currentPage && items.length) {
+    //         setCurrentItems(currentData())
+    //     }
+    // }, [currentPage, items, itemsPerPage])
 
     if (items.length === 0) {
         return (
@@ -57,7 +59,7 @@ const CollectionsPage = () => {
                 condition={!!items.length}
                 then={
                     <div>
-                        <Table data={currentItems} />
+                        <Table data={currentData()} />
                         <div className="h-4 w-full" />
                         <Pagination
                             currentPage={currentPage}
@@ -65,7 +67,8 @@ const CollectionsPage = () => {
                             prev={prev}
                             next={next}
                             jump={jump}
-                            getTiles={getPaginationTiles}
+                            // getTiles={getPaginationTiles}
+                            info={getPaginationInfo()}
                             itemsPerPage={itemsPerPage}
                             setItemsPerPage={setItemsPerPage}
                         />

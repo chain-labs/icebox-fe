@@ -32,7 +32,7 @@ const Dropdown = ({ options, input, setInput }: Props) => {
     return (
         <div className="relative overflow-visible">
             <button
-                className="text-black border border-gray-50 bg-gray-0 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center"
+                className="text-gray-500 focus:outline-none focus:ring-blue-300 font-medium text-xs px-1 text-center flex items-center"
                 onClick={handleExpand}
             >
                 {
@@ -40,7 +40,7 @@ const Dropdown = ({ options, input, setInput }: Props) => {
                         options.findIndex((option) => option.value === input)
                     ].label
                 }
-                <div className="text-gray-300 ml-2">
+                <div className="text-gray-400 ml-0.5">
                     <ChevronDownSmall size={10} strokeWidth={4} />
                 </div>
             </button>
@@ -50,9 +50,9 @@ const Dropdown = ({ options, input, setInput }: Props) => {
                     <div
                         id="dropdown"
                         ref={ref}
-                        className="text-black z-10 absolute top-9.5 left-0 w-full border border-gray-50  cursor-pointer divide-y divide-gray-100 rounded-sm shadow"
+                        className="text-black z-10 absolute top-9.5 left-0 w-full border border-gray-50  cursor-pointer shadow"
                     >
-                        <ul className="text-sm text-black">
+                        <ul className="text-xs text-gray-500">
                             {options?.map((option) => (
                                 <li
                                     key={option.label}
@@ -62,7 +62,7 @@ const Dropdown = ({ options, input, setInput }: Props) => {
                                 >
                                     <a
                                         href="#"
-                                        className="block px-4 py-2 hover:bg-gray-100 "
+                                        className="block text-center py-2 hover:bg-gray-100 "
                                     >
                                         {option.label}
                                     </a>
