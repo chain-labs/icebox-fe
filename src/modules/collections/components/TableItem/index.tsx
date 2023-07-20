@@ -37,11 +37,11 @@ export type TableItemProps = {
 
 const TableItem = (props: TableItemProps) => {
     return (
-        <Link href={`/collection/${props?.slug}`}>
-            <div className="text-black text-sm w-full h-12 bg-white border-b border-b-slate-200 flex justify-between items-center cursor-pointer hover:bg-[#f8f9fc] hover:bg-opacity-80 hover:backdrop-blur-[8px]">
-                <div
+        <Link href={`/collection/${props?.slug}`} key={props.slug}>
+            <tr className="text-black text-sm w-full h-12 bg-white border-b border-b-slate-200 flex justify-between items-center cursor-pointer hover:bg-[#f8f9fc] hover:bg-opacity-80 hover:backdrop-blur-[8px]">
+                <td
                     className="pl-2.5 py-2 flex items-center"
-                    style={{ width: '25%' }}
+                    style={{ width: '20%' }}
                 >
                     <div className="relative h-8 w-8 rounded-lg overflow-hidden">
                         <Image
@@ -53,9 +53,8 @@ const TableItem = (props: TableItemProps) => {
                     <div className="ml-2 font-medium text-gray-900">
                         {props.name}
                     </div>
-                </div>
-
-                <div
+                </td>
+                <td
                     className="pl-2.5 flex items-center"
                     style={{ width: '12%' }}
                 >
@@ -64,9 +63,8 @@ const TableItem = (props: TableItemProps) => {
                         <ArrowRight size={14} className="mx-1" />
                         <div>{formatNumber(props.inscriptions.max)}</div>
                     </div>
-                </div>
-
-                <div className="flex items-center" style={{ width: '10%' }}>
+                </td>
+                <td className="flex items-center" style={{ width: '15%' }}>
                     <If
                         condition={!!props.top_loan_offer}
                         then={
@@ -88,12 +86,8 @@ const TableItem = (props: TableItemProps) => {
                             </div>
                         }
                     />
-                </div>
-
-                <div
-                    className="py-2 flex items-center"
-                    style={{ width: '10%' }}
-                >
+                </td>
+                <td className="py-2 flex items-center" style={{ width: '8%' }}>
                     <If
                         condition={!!props.floor_price}
                         then={
@@ -115,12 +109,8 @@ const TableItem = (props: TableItemProps) => {
                             </div>
                         }
                     />
-                </div>
-
-                <div
-                    className="py-2 flex items-center"
-                    style={{ width: '12%' }}
-                >
+                </td>
+                <td className="py-2 flex items-center" style={{ width: '12%' }}>
                     <If
                         condition={!!props.loan_volume_7d.value}
                         then={
@@ -155,12 +145,8 @@ const TableItem = (props: TableItemProps) => {
                             </div>
                         }
                     />
-                </div>
-
-                <div
-                    className="py-2 flex items-center"
-                    style={{ width: '12%' }}
-                >
+                </td>
+                <td className="py-2 flex items-center" style={{ width: '12%' }}>
                     <If
                         condition={!!props.sales_volume_7d.value}
                         then={
@@ -195,11 +181,10 @@ const TableItem = (props: TableItemProps) => {
                             </div>
                         }
                     />
-                </div>
-
-                <div
+                </td>
+                <td
                     className="py-2 flex items-center justify-center"
-                    style={{ width: '6%' }}
+                    style={{ width: '10%' }}
                 >
                     <div className="flex px-2.5">
                         <If
@@ -231,8 +216,8 @@ const TableItem = (props: TableItemProps) => {
                             }
                         />
                     </div>
-                </div>
-            </div>
+                </td>
+            </tr>
         </Link>
     )
 }

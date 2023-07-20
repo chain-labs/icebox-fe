@@ -7,13 +7,14 @@ interface HeaderItemProps {
     sort?: boolean
     info?: boolean
     width?: string
+    shrink?: number
 }
 
-const HeaderItem = ({ title, sort, info, width }: HeaderItemProps) => {
+const HeaderItem = ({ title, sort, info, width, shrink }: HeaderItemProps) => {
     return (
-        <div
-            className={`pl-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center cursor-pointer border-b border-b-slate-200`}
-            style={{ width: width }}
+        <th
+            className={`h-full pl-2.5 py-2 flex items-center text-gray-500 text-xs font-medium text-center cursor-pointer`}
+            style={{ width: width, flexShrink: shrink }}
         >
             <div className="mr-1.5 flex items-center">{title}</div>
             <If
@@ -38,7 +39,7 @@ const HeaderItem = ({ title, sort, info, width }: HeaderItemProps) => {
                     />
                 }
             />
-        </div>
+        </th>
     )
 }
 
