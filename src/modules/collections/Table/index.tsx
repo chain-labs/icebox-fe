@@ -1,11 +1,11 @@
 import TableHeader from '../components/TableHeader'
 import TableItem from '../components/TableItem'
 
-const Table = ({ data }: { data: any[] }) => {
+const Table = ({ data, headers }: { data: any[]; headers: any[] }) => {
     return (
         <div className="w-full">
             <table className="table-auto w-full overflow-x-auto">
-                <TableHeader />
+                <TableHeader headers={headers} />
                 <tbody>
                     {data?.map((item) => (
                         <TableItem

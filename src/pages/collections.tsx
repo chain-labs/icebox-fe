@@ -3,6 +3,7 @@ import Pagination from '@/common/components/Pagination'
 import usePaginate from '@/common/hooks/usePaginate'
 import Table from '@/modules/collections/Table'
 import { TableItemProps } from '@/modules/collections/components/TableItem'
+import { TABLE_HEADERS } from '@/modules/collections/mocks/headers'
 import { ArrowCycle } from 'akar-icons'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
@@ -59,7 +60,7 @@ const CollectionsPage = () => {
                 condition={!!items.length}
                 then={
                     <div>
-                        <Table data={currentData()} />
+                        <Table data={currentData()} headers={TABLE_HEADERS} />
                         <div className="h-4 w-full" />
                         <Pagination
                             currentPage={currentPage}
