@@ -1,40 +1,26 @@
 import '@/styles/globals.css'
-import '@rainbow-me/rainbowkit/styles.css'
-import {
-    ConnectButton,
-    getDefaultWallets,
-    RainbowKitProvider,
-} from '@rainbow-me/rainbowkit'
-import { configureChains, createClient, WagmiConfig } from 'wagmi'
-import { polygon } from 'wagmi/chains'
-import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { publicProvider } from 'wagmi/providers/public'
+import Navbar from '@/modules/navigation/Navbar'
+import Head from 'next/head'
+import { LOGO_URL } from '@/common/constants'
 
-const { chains, provider } = configureChains(
-    [polygon],
-    [
-        alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID }),
-        publicProvider(),
-    ]
-)
-
-const { connectors } = getDefaultWallets({
-    appName: 'Owlearn',
-    chains,
-})
-
-const wagmiClient = createClient({
-    autoConnect: true,
-    connectors,
-    provider,
-})
 
 export default function App({ Component, pageProps }) {
     return (
-        <WagmiConfig client={wagmiClient}>
-            <RainbowKitProvider chains={chains}>
-                <Component {...pageProps} />
-            </RainbowKitProvider>
-        </WagmiConfig>
+        <div>
+            <Head>
+                <title>Icebox</title>
+                <meta
+                    name="description"
+                    content="Icebox app for Ordinals Lending"
+                />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+                <link rel="icon" href={LOGO_URL} />
+            </Head>
+            <Navbar />
+            <Component {...pageProps} />
+        </div>
     )
 }

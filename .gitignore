@@ -38,6 +38,11 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+# Storybook build files
+storybook-static
+
+build-storybook.log
+
 # Dependency directories
 node_modules/
 jspm_packages/
