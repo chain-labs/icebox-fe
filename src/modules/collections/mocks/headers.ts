@@ -1,0 +1,51 @@
+export const TABLE_HEADERS = [
+    {
+        title: 'COLLECTION NAME',
+        width: '20%',
+        sort: true,
+        shrink: 3,
+        info: false,
+    },
+    {
+        title: 'INSCRIPTION(#)',
+        width: '12%',
+        sort: true,
+        shrink: 1,
+        info: false,
+    },
+    {
+        title: 'TOP LOAN OFFER',
+        width: '15%',
+        sort: true,
+        shrink: 1,
+        info: false,
+    },
+    {
+        title: 'FLOOR PRICE',
+        width: '8%',
+        sort: true,
+        shrink: 0,
+        info: false,
+    },
+    {
+        title: '7D LOAN VOLUME',
+        width: '12%',
+        sort: true,
+        shrink: 1,
+        info: false,
+    },
+    {
+        title: '7D SALES VOLUME',
+        width: '12%',
+        sort: true,
+        shrink: 1,
+        info: false,
+    },
+    {
+        title: 'BUY ON',
+        width: '10%',
+        sort: false,
+        shrink: 0,
+        info: true,
+    },
+]
