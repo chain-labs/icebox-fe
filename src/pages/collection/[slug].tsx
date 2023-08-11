@@ -1,8 +1,9 @@
 import axios from 'axios'
-import { GetStaticProps, NextPageContext } from 'next'
+import { NextPageContext } from 'next'
 import { useRouter } from 'next/router'
 import React from 'react'
 import absoluteUrl from 'next-absolute-url'
+import CollectionPage from '@/modules/collection'
 
 export async function getServerSideProps(context: NextPageContext) {
     const { origin } = absoluteUrl(context.req)
@@ -12,17 +13,15 @@ export async function getServerSideProps(context: NextPageContext) {
     const res = await axios.get(url)
 
     return {
-        props: {
-            data: res.data,
-        },
+        props: res.data,
     }
 }
 
 const CollectionSlug = (props) => {
     const router = useRouter()
-    console.log({ props: props.data })
+    console.log({ props: props })
 
-    return <div>{router.query.slug}</div>
+    return <CollectionPage {...props} />
 }
 
 export default CollectionSlug
